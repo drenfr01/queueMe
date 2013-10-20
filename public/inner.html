@@ -32,28 +32,53 @@
 </head> 
 <body> 
 
-<div data-role="page"> 
+<div data-role="page" id="main"> 
  
 	<div data-role="header" data-position="fixed"> 
 		<h1>Queue Me!</h1>
 	</div><!-- /header --> 
  
 	<div data-role="content"> 
-		 <img src="logontag.png" width="450px"></img>
+		 <img src="logontag.png" width="350px"></img>
  
 		<h2>Login</h2>
 		
 			<input/>
 			<h2>Password</h2>
 			<input type="password"/>
-		    <a href="#formElements">
+		    <a href="#ActiveQueues">
 		
 		
 			<button class="ui-btn-plain">Go Q!</button></a>
 		</div><!-- /ui-body wrapper -->	
 </div><!-- /page --> 
 
- 
+<!-- Second Page -->
+ <div data-role="page" id="ActiveQueues"> 
+ 	<div data-role="header" data-position="fixed">
+		<h1>Form Elements</h1>
+		<a href="inner.html#main" data-theme="a">Back</a>
+	</div><!-- /header --> 
+
+	<div data-role="content"> 
+		 <img src="logontag.png" width="350px"></img>
+
+ 		<ul data-role="listview" data-inset="true"> 
+			
+      <li>
+      <a href="#headers"><div>
+      <img src="logontag.png" width="50px"></img>Dr. Bob's Office</br>
+      <div class="smalltext">956 Kenmore Ave</div> 
+      </div></a>
+      </li> 
+			<li><a href="#headerButtons">Dr Jim's Office</a></li> 
+			<li><a href="#footerTabs">Allergy Associates</a></li> 
+		</ul> 
+	
+	
+		</div><!-- /ui-body wrapper -->	
+</div><!-- /page --> 
+
 <div data-role="page"> 
  
 	<div data-role="header" data-position="fixed"> 
