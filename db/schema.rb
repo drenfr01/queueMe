@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131019235720) do
+ActiveRecord::Schema.define(:version => 20131020000656) do
 
   create_table "appointments", :force => true do |t|
     t.string   "appointment_type"
@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(:version => 20131019235720) do
     t.string   "user_name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "waiting_queues", :force => true do |t|
+    t.time     "check_in"
+    t.time     "check_out"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.integer  "user_id"
+    t.integer  "appointment_id"
   end
 
 end
